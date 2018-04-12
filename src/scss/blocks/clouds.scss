@@ -1,0 +1,32 @@
+.clouds {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    float: left;
+  }
+
+  @for $i from 1 through 10 {
+    $new-position: 10 * $i;
+
+    li:nth-of-type(#{$i}) {
+      will-change: scroll-position;
+      list-style: none;
+      padding-left: #{100 * $i}px;
+      position: absolute;
+      width: #{600 - ($i * 10)}px;
+      height: auto;
+      top: random(100) + px;
+      animation-delay: -#{$i * 15}s;
+      animation-direction: normal;
+      animation-iteration-count: infinite;
+      animation-name: horizontal-scroll;
+      animation-timing-function: linear;
+      animation-duration: (10 * ($i * 2))+(s);
+      opacity: (.25 * $i);
+      will-change: auto;
+    }
+  }
+}

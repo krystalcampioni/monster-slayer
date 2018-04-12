@@ -1,0 +1,28 @@
+$tablet: '(min-width: 30em) and (max-width: 49em)';
+$phone: '(max-width: 30em)';
+$desktop: '(min-width: 49em)';
+$tablet-up: '(min-width: 30em)';
+$up-to-tablet: '(max-width: 49em)';
+$extra-small-screen: '(max-width: 23em)';
+
+$desktop-grid-max-width: 1200px;
+
+
+@mixin device($device-widths) {
+  @media screen and #{$device-widths} { @content }
+}
+
+.grid-container {
+  margin: 0 auto;
+  max-width: $desktop-grid-max-width;
+  padding: 40px 0;
+  clear: both;
+  position: relative;
+}
+
+.row-fixed-top {
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  padding: 0px 20px;
+}

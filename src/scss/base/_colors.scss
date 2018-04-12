@@ -1,0 +1,23 @@
+$black:                #000;
+$white:                #fff;
+
+$red:                  #a72333;
+$golden:               #e6a400;
+$green:                #2cd1af;
+$blue:                 #01e3eb;
+
+$overlay-color:        rgba(53, 52, 61, .75);
+$light-overlay-color:  rgba($white, .95);
+
+$lightest-gray:        #f3f8ff;
+$light-gray:           #e6ebf0;
+$medium-gray:          #9599aa;
+$gray:                 #424b53;
+$dark-gray:            #2d3047;
+
+$primary-color:        #2b445c;
+$primary-color-hover:  lighten($primary-color, 10%);
+$secondary-color:      $green;
+
+$primary-text-color:   $dark-gray;
+$secondary-text-color: $medium-gray;

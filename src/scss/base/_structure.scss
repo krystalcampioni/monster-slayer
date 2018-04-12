@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: $dark-gray;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url('../images/background/sky.png');
+  background-size: 3px;
+  background-repeat: repeat-x;
+  background-color: #0d2f4b;
+}
+
+hr {
+  border-color: $lightest-gray;
+  border-width: 0 0 1px;
+  margin: ($default-margin * 2) 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li { list-style: none; }
+}
+
+sub {
+  margin-bottom: ($default-margin * 2);
+  display: block;
+}
+
+input {
+  &[type='number'] {
+    appearance: none;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}
+
+button {
+  outline: none;
+  appearance: none;
+}

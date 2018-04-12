@@ -1,0 +1,73 @@
+.statusBar {
+  width: 40%;
+  position: relative;
+  height: 120px;
+  float: left;
+  will-change: contents;
+
+  &::after {
+    width: 100%;
+    content: '';
+    z-index: 100;
+    position: absolute;
+    height: 108%;
+    left: 0;
+    top: 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../images/healthbar/simple.png');
+  }
+
+  &.-hasMana::after {
+    background-image: url('../images/healthbar/has-mana.png');
+  }
+
+  &:nth-of-type(2) {
+    transform: scale(-1, 1);
+    float: right;
+
+    img {
+      transform: scale(-1, 1);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 20%;
+    top: 12px;
+  }
+
+
+  &__bar {
+    transition: all .5s ease;
+    background: #8BC34A;
+    height: 20px;
+  }
+
+  &__barWrapper {
+    width: calc(100% - 120px);
+    position: absolute;
+    margin: 0;
+    background: rgba($black, .8);
+
+    &.-health {
+      left: 100px;
+      top: 58px;
+    }
+
+    &.-health.-hasMana {
+      top: 42px;
+      left: 100px;
+    }
+
+    &.-mana {
+      left: 95px;
+      top: 70px;
+      width: calc(100% - 190px);
+
+      * { background: $blue;}
+    }
+  }
+}

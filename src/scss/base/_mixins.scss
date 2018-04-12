@@ -1,0 +1,10 @@
+@mixin columned-list($columns, $gap) {
+  @include prefixer(column-count, $columns, webkit moz spec);
+  @include prefixer(column-gap, $gap, webkit moz spec);
+}
+
+@mixin text-ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

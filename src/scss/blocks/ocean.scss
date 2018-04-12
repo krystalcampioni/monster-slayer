@@ -1,0 +1,50 @@
+.ocean {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  height: calc(100% - 280px);
+  z-index: 100;
+
+  @for $i from 1 through 3 {
+    $new-position: 10 * $i;
+
+    &__back-wave:nth-of-type(#{$i}) {
+      will-change: auto;
+      background-image: url('../images/background/waves1.png');
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -#{100 * $i}px;
+      animation-direction: normal;
+      animation-iteration-count: infinite;
+      animation-name: background-scroll;
+      animation-timing-function: linear;
+      animation-duration: (20 * $i)+(s);
+      opacity: (.25 * $i);
+      height: 100%;
+      background-repeat: repeat-x;
+      will-change: contents;
+    }
+  }
+
+  &__front-wave {
+    transform-origin: center top;
+    background-image: url('../images/background/waves2.png');
+    height: 170px;
+    width: 110%;
+    position: absolute;
+    left: -20px;
+    z-index: 1000;
+    top: 630px;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-name: front-wave;
+    animation-timing-function: linear;
+    animation-duration: 8s;
+    background-size: 950px;
+    will-change: transform;
+  }
+}
