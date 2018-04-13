@@ -2,6 +2,8 @@
 
 > A little Vue.js game prototype. The idea of this project was to expand on the Monster Slayer project created by Maximilian Schwarzmüller on his [VueJs2 The Complete Guide Course ](http://www.udemy.com/vuejs-2-the-complete-guide), and see how further we could push the limits of the interface using Vue components, transitions and CSS animations.
 
+> I presented a talk this game and how to create interactive and animated interfaces with VueJS on the Code Talks Commerce 2018 in Berlin. You can find the slides here: https://krystalcampioni.github.io/monster-slayer
+
 
 ## Build Setup
 
