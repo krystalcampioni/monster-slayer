@@ -4,8 +4,8 @@
 }
 
 @keyframes horizontal-scroll {
-  from { right: -100vw }
-  to { right: 100vw }
+  from { transform: translateX(100vw); }
+  to { transform: translateX(-50vw); }
 }
 
 @keyframes front-wave {
@@ -32,5 +32,17 @@
   }
   100% {
     transform: translate(0, 0)  rotate(1deg);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(250px) scale(0);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
   }
 }

@@ -8,7 +8,7 @@
   will-change: transform;
 
   &__button {
-    transition: all .5 ease-in-out;
+    transition: all .2s ease-in-out;
     background: $primary-color;
     color: $white;
     appearance: none;
@@ -17,8 +17,12 @@
     padding: 10px 15px;
     font-size: 24px;
 
+    &:hover {
+      transform: scale(1.1);
+    }
+
     &:active {
-      transform: scale(.9)
+      transform: scale(.9);
     }
 
     &.-isDisabled {

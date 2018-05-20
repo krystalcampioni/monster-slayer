@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    transition(name="bounce"  mode="out-in")
+    transition(name="fade"  mode="out-in")
       Dialog(:action='startGame' :title='dialogTitle' v-if='showDialog')
     .row-fixed-top
       StatusBar(:character='player' :hasMana='true')

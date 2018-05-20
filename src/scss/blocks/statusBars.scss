@@ -37,6 +37,7 @@
     overflow: hidden;
     width: 20%;
     top: 12px;
+    z-index: 10;
   }
 
 
@@ -54,18 +55,18 @@
 
     &.-health {
       left: 100px;
-      top: 58px;
+      top: 66px;
     }
 
     &.-health.-hasMana {
-      top: 42px;
+      top: 46px;
       left: 100px;
     }
 
     &.-mana {
       left: 95px;
-      top: 70px;
-      width: calc(100% - 190px);
+      top: 82px;
+      width: calc(100% - 200px);
 
       * { background: $blue;}
     }
